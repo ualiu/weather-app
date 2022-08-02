@@ -55,3 +55,8 @@ input {
   font: inherit;
   font-size: 120%;
 }
+
+#message-to-user {
+  color: orange;
+  font-style: italic;
+}
