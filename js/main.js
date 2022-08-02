@@ -25,7 +25,9 @@ function getFetch(){
         document.getElementById('humidity').innerText = `Humidity: ${currentHumid}%`
         document.getElementById('wind').innerText = `Wind-speed: ${currentWind}km/h`
 
-        if (currentTemp >= 0 && currentTemp <= 10 ) {
+        document.body.style.backgroundImage = `url(https://source.unsplash.com/1600x900/?${choice})`
+
+         if (currentTemp >= 0 && currentTemp <= 10 ) {
           document.getElementById('message-to-user').innerText = `It will be a cool day in ${choice} today. Bring a jacket!`
         } else if (currentTemp >= 11 && currentTemp <= 20) {
           document.getElementById('message-to-user').innerText = `It will be a pleasant day in ${choice} today!`
@@ -34,7 +36,8 @@ function getFetch(){
         } else {
           document.getElementById('message-to-user').innerText = `It will be a cold day in ${choice} today. Make sure you dress up warm!`
         }
-       
+
+               
       })
       .catch(err => {
           console.log(`error ${err}`)
